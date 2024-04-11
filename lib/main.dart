@@ -1,28 +1,21 @@
 import 'package:flutter/material.dart';
-
-void main() {
-  runApp(new MaterialApp(
-    home: new HalamanSatu(),
-  ));
-}
-
-class HalamanSatu extends StatelessWidget {
+import 'package:flutter/widgets.dart';
+void main() => runApp(MyApp());
+class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      body: 
-      new Center(
-        child:new Container(
-        //id=kotak
-        color: Colors.blue[900],
-        width: 200.0,
-        height: 100.0,
-        child: new Center(
-          child: new Icon(Icons.airplanemode_active, color: Colors.yellow, size: 70.0,)
-        ),
+  Widget build (BuildContext context){
+    return MaterialApp(
+      title: 'first App',
+      home: Scaffold(
+        backgroundColor: Colors.yellow,
+        appBar: AppBar(
+          backgroundColor: Colors.grey,
+          title: Text('Aplikasi Flutter')
+          ),
+          body: Center(
+            child: Text('Selamat Datang Di Flutter'),
+          ),
       ),
-    )
-    
     );
   }
 }
